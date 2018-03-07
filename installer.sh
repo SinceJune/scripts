@@ -4,4 +4,9 @@ sudo apt-get install apt-transport-https ca-certificates curl software-propertie
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
 sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
 sudo apt update && sudo apt dist-upgrade && \
-sudo apt install docker-ce python python-pip default-jdk
+sudo apt install docker-ce python python-pip default-jdk && \
+sudo sysctl -w vm.max_map_count=262144
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.tar.gz && \
+tar -zxvf elasticsearch-6.2.2.tar.gz && \
+wget https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.tar.gz && \
+tar -zxvf logstash-6.2.2.tar.gz
