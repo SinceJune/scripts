@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "installing dependency..." && \
 sudo locale-gen zh_CN.UTF-8 && \
+sudo apt install mosh && \
 sudo apt-get -y install apt-transport-https ca-certificates curl software-properties-common && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
