@@ -10,6 +10,8 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-c
 sudo chmod +x /usr/local/bin/docker-compose && \
 sudo groupadd docker && \
 sudo usermod -aG docker $USER && \
+newgrp docker && \
+newgrp ubuntu && \
 sudo sysctl -w vm.max_map_count=262144 && \
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.tar.gz && \
 tar -zxvf elasticsearch-6.2.2.tar.gz && \
